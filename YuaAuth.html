@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YuaAuth provides hardware-locked licensing and anti-tamper protection for your compiled applications. Secure your software with our simple API.">
+    <title>YuaAuth | Protection for Compiled Apps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #111111;
+            --border: #222222;
+            --text-muted: #888888;
+            --accent: #3b82f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: linear-gradient(135deg, var(--bg) 0%, #0d0d0d 100%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Simplified Nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 0;
+            margin-bottom: 60px;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 1;
+        }
+
+        .logo { font-weight: 600; font-size: 18px; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .nav-links a:hover { color: #fff; }
+
+        /* Hero Section */
+        .hero { margin-bottom: 100px; }
+        .hero h1 { font-size: 52px; font-weight: 600; letter-spacing: -1.5px; margin-bottom: 16px; color: #f5f5f5; }
+        .hero p { font-size: 18px; color: var(--text-muted); max-width: 550px; margin-bottom: 32px; }
+
+        .btn-group { display: flex; gap: 12px; }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-primary { background: #fff; color: #000; }
+        .btn-primary:hover { background: #ccc; }
+        .btn-secondary { border: 1px solid var(--border); color: #fff; }
+        .btn-secondary:hover { background: var(--card); }
+
+        /* Features Showcase */
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .feature-card h3 { font-size: 18px; margin-bottom: 12px; font-weight: 600; }
+        .feature-card p { color: var(--text-muted); font-size: 14px; }
+        .feature-card { transition: transform 0.2s; }
+        .feature-card:hover { transform: translateY(-2px); }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .step-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover { transform: translateY(-2px); }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin: 0 auto 16px;
+        }
+
+        .step-card h3 { font-size: 18px; margin-bottom: 12px; font-weight: 600; }
+        .step-card p { color: var(--text-muted); font-size: 14px; }
+
+        /* Technical Showcase (Human touch) */
+        .terminal {
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .terminal-header {
+            background: #111;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: #222; }
+
+        .terminal-content {
+            padding: 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #d1d1d1;
+            line-height: 1.7;
+        }
+
+        .blue { color: var(--accent); }
+        .green { color: #10b981; }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            nav .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">YuaAuth</div>
+            <div class="nav-links">
+                <a href="#">Engine</a>
+                <a href="#">Documentation</a>
+                <a href="#">Security Audit</a>
+                <a href="#">Pricing</a>
+            </div>
+            <a href="#" class="btn btn-secondary">Login</a>
+        </nav>
+
+        <section class="hero">
+            <h1>Secure your software.</h1>
+            <p>A simple API for hardware-locked licensing, remote session management, and anti-tamper verification.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">Start Building</a>
+                <a href="#" class="btn btn-secondary">View SDK</a>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                </div>
+                <div class="terminal-content">
+                    <div><span class="blue">$</span> curl -X POST https://api.yua.auth/v1/verify \</div>
+                    <div>&nbsp;&nbsp;-H <span class="green">"Authorization: Bearer YUA_7712_X"</span> \</div>
+                    <div>&nbsp;&nbsp;-d <span class="green">'{"hwid": "0xFFA129", "app_id": "core_v2"}'</span></div>
+                    <br>
+                    <div style="color: #666;">// Response 200 OK</div>
+                    <div>{ <span class="blue">"status"</span>: <span class="green">"active"</span>, <span class="blue">"expiry"</span>: <span class="green">"2025-12-01"</span> }</div>
+                </div>
+            </div>
+        </section>
+
+        <span class="section-label">Core Capabilities</span>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Hardware ID Locking</h3>
+                <p>Pin licenses to a specific machine profile using multi-point verification. Prevents account sharing out of the box.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Encrypted Heartbeats</h3>
+                <p>Silent background checks that ensure the user is still authorized. If a session is revoked, the app closes instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Blacklist Engine</h3>
+                <p>Global ban system. Block IPs, specific hardware profiles, or leaked keys with a single dashboard action.</p>
+            </div>
+        </div>
+
+        <span class="section-label">How It Works</span>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Integrate SDK</h3>
+                <p>Download our lightweight SDK and integrate it into your application with minimal code changes.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Configure Licensing</h3>
+                <p>Set up your licensing rules, hardware locking, and session management through our dashboard.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Deploy & Monitor</h3>
+                <p>Release your protected app and monitor usage, revoke access, and manage blacklists in real-time.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div>© 2024 YuaAuth Systems</div>
+            <div>Status: All Systems Operational</div>
+        </footer>
+    </div>
+
+</body>
+</html>

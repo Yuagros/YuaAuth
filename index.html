@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YuaAuth provides hardware-locked licensing and anti-tamper protection for your compiled applications. Secure your software with our simple API.">
+    <title>YuaAuth | Protection for Compiled Apps</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">YuaAuth</div>
+            <div class="nav-links">
+                <a href="#engine">Engine</a>
+                <a href="pages/documentation.html">Documentation</a>
+                <a href="pages/security-audit.html">Security Audit</a>
+                <a href="pages/pricing.html">Pricing</a>
+            </div>
+            <a href="#" class="btn btn-secondary">Login</a>
+        </nav>
+
+        <section class="hero">
+            <h1>Secure your software.</h1>
+            <p>A simple API for hardware-locked licensing, remote session management, and anti-tamper verification.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">Start Building</a>
+                <a href="#" class="btn btn-secondary">View SDK</a>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                </div>
+                <div class="terminal-content">
+                    <div><span class="blue">$</span> curl -X POST https://api.yua.auth/v1/verify \</div>
+                    <div>&nbsp;&nbsp;-H <span class="green">"Authorization: Bearer YUA_7712_X"</span> \</div>
+                    <div>&nbsp;&nbsp;-d <span class="green">'{"hwid": "0xFFA129", "app_id": "core_v2"}'</span></div>
+                    <br>
+                    <div style="color: #666;">// Response 200 OK</div>
+                    <div>{ <span class="blue">"status"</span>: <span class="green">"active"</span>, <span class="blue">"expiry"</span>: <span class="green">"2025-12-01"</span> }</div>
+                </div>
+            </div>
+        </section>
+
+        <span class="section-label">Core Capabilities</span>
+        <div class="features-grid" id="engine">
+            <div class="feature-card">
+                <h3>Hardware ID Locking</h3>
+                <p>Pin licenses to a specific machine profile using multi-point verification. Prevents account sharing out of the box.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Encrypted Heartbeats</h3>
+                <p>Silent background checks that ensure the user is still authorized. If a session is revoked, the app closes instantly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Blacklist Engine</h3>
+                <p>Global ban system. Block IPs, specific hardware profiles, or leaked keys with a single dashboard action.</p>
+            </div>
+        </div>
+
+        <span class="section-label">How It Works</span>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Integrate SDK</h3>
+                <p>Download our lightweight SDK and integrate it into your application with minimal code changes.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Configure Licensing</h3>
+                <p>Set up your licensing rules, hardware locking, and session management through our dashboard.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Deploy & Monitor</h3>
+                <p>Release your protected app and monitor usage, revoke access, and manage blacklists in real-time.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div>© 2024 YuaAuth Systems</div>
+            <div>Status: All Systems Operational</div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
