@@ -11,6 +11,12 @@
 </head>
 <body>
     <div class="ambient-bg"></div>
+    <div class="announcement-banner" id="announcement-banner" hidden>
+        <div class="announcement-inner">
+            <div><strong>Announcement:</strong> <span class="announcement-message"></span></div>
+            <div class="announcement-ends"></div>
+        </div>
+    </div>
     <div class="container">
         <nav>
             <a href="index.html" class="logo">YuaAuth</a>
@@ -39,7 +45,7 @@
                 <a href="pages/login.html" class="btn btn-ghost">Login</a>
             </div>
 
-            <div class="terminal reveal">
+            <div class="terminal">
                 <div class="terminal-header">
                     <div class="dot"></div><div class="dot"></div><div class="dot"></div>
                 </div>
@@ -56,15 +62,15 @@
 
         <span class="section-label">Core Capabilities</span>
         <div class="features-grid" id="engine">
-            <div class="feature-card reveal float-slow">
+            <div class="feature-card reveal">
                 <h3>Hardware ID Locking</h3>
                 <p>Pin licenses to a specific machine profile using multi-point verification. Prevents account sharing out of the box.</p>
             </div>
-            <div class="feature-card reveal float-mid">
+            <div class="feature-card reveal">
                 <h3>Encrypted Heartbeats</h3>
                 <p>Silent background checks that ensure the user is still authorized. If a session is revoked, the app closes instantly.</p>
             </div>
-            <div class="feature-card reveal float-fast">
+            <div class="feature-card reveal">
                 <h3>Blacklist Engine</h3>
                 <p>Global ban system. Block IPs, specific hardware profiles, or leaked keys with a single dashboard action.</p>
             </div>
