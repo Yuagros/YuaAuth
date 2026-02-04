@@ -6,33 +6,40 @@
     <meta name="description" content="YuaAuth provides hardware-locked licensing and anti-tamper protection for your compiled applications. Secure your software with our simple API.">
     <title>YuaAuth | Protection for Compiled Apps</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-
+    <div class="ambient-bg"></div>
     <div class="container">
         <nav>
-            <div class="logo">YuaAuth</div>
+            <a href="index.html" class="logo">YuaAuth</a>
             <div class="nav-links">
                 <a href="#engine">Engine</a>
                 <a href="pages/documentation.html">Documentation</a>
                 <a href="pages/security-audit.html">Security Audit</a>
                 <a href="pages/pricing.html">Pricing</a>
+                <a href="pages/status.html">Status</a>
             </div>
-            <a href="#" class="btn btn-secondary">Login</a>
+            <a href="pages/login.html" class="btn btn-secondary">Login</a>
         </nav>
 
         <section class="hero">
+            <a class="status-pill" href="pages/status.html">
+                <span class="status-dot"></span>
+                All systems operational
+            </a>
             <h1>Secure your software.</h1>
             <p>A simple API for hardware-locked licensing, remote session management, and anti-tamper verification.</p>
-            <div class="btn-group">
-                <a href="#" class="btn btn-primary">Start Building</a>
-                <a href="#" class="btn btn-secondary">View SDK</a>
+            <div class="hero-actions">
+                <div class="btn-group">
+                    <a href="pages/start-building.html" class="btn btn-primary">Start Building</a>
+                    <a href="pages/sdk.html" class="btn btn-secondary">View SDK</a>
+                </div>
+                <a href="pages/login.html" class="btn btn-ghost">Login</a>
             </div>
 
-            <div class="terminal">
+            <div class="terminal reveal">
                 <div class="terminal-header">
                     <div class="dot"></div><div class="dot"></div><div class="dot"></div>
                 </div>
@@ -49,15 +56,15 @@
 
         <span class="section-label">Core Capabilities</span>
         <div class="features-grid" id="engine">
-            <div class="feature-card">
+            <div class="feature-card reveal float-slow">
                 <h3>Hardware ID Locking</h3>
                 <p>Pin licenses to a specific machine profile using multi-point verification. Prevents account sharing out of the box.</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card reveal float-mid">
                 <h3>Encrypted Heartbeats</h3>
                 <p>Silent background checks that ensure the user is still authorized. If a session is revoked, the app closes instantly.</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card reveal float-fast">
                 <h3>Blacklist Engine</h3>
                 <p>Global ban system. Block IPs, specific hardware profiles, or leaked keys with a single dashboard action.</p>
             </div>
@@ -65,26 +72,52 @@
 
         <span class="section-label">How It Works</span>
         <div class="steps-grid">
-            <div class="step-card">
+            <div class="step-card reveal">
                 <div class="step-number">1</div>
                 <h3>Integrate SDK</h3>
                 <p>Download our lightweight SDK and integrate it into your application with minimal code changes.</p>
             </div>
-            <div class="step-card">
+            <div class="step-card reveal">
                 <div class="step-number">2</div>
                 <h3>Configure Licensing</h3>
                 <p>Set up your licensing rules, hardware locking, and session management through our dashboard.</p>
             </div>
-            <div class="step-card">
+            <div class="step-card reveal">
                 <div class="step-number">3</div>
                 <h3>Deploy & Monitor</h3>
                 <p>Release your protected app and monitor usage, revoke access, and manage blacklists in real-time.</p>
             </div>
         </div>
 
+        <span class="section-label">Status & Uptime</span>
+        <div class="status-grid">
+            <div class="status-card reveal">
+                <div class="status-indicator"><span></span> API Gateway</div>
+                <p>Latency within target. Global edge verification is stable.</p>
+            </div>
+            <div class="status-card reveal">
+                <div class="status-indicator"><span></span> Licensing Core</div>
+                <p>All license checks processing normally.</p>
+            </div>
+            <div class="status-card reveal">
+                <div class="status-indicator partial"><span></span> Dashboard</div>
+                <p>Minor delays for analytics refresh.</p>
+            </div>
+        </div>
+
+        <div class="cta-card reveal">
+            <div>
+                <h3>Ready to lock down your release?</h3>
+                <p>Spin up a workspace and get a verified key in minutes.</p>
+            </div>
+            <a href="pages/start-building.html" class="btn btn-primary">Start Building</a>
+        </div>
+
         <footer>
-            <div>© 2024 YuaAuth Systems</div>
-            <div>Status: All Systems Operational</div>
+            <div>© 2026 YuaAuth Systems</div>
+            <div>
+                <a href="pages/status.html">Status: All Systems Operational</a>
+            </div>
         </footer>
     </div>
 

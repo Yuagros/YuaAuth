@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="YuaAuth Documentation - Complete guide to integrating and using our software protection API.">
-    <title>Documentation | YuaAuth</title>
+    <meta name="description" content="YuaAuth SDK downloads and integration examples.">
+    <title>SDK | YuaAuth</title>
     <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
@@ -25,31 +25,42 @@
         </nav>
 
         <section class="hero">
-            <h1>Documentation</h1>
-            <p>Everything you need to integrate YuaAuth into your applications.</p>
+            <h1>SDK Downloads</h1>
+            <p>Choose a language SDK, check the release notes, and integrate fast.</p>
         </section>
 
         <div class="features-grid">
             <div class="feature-card reveal">
-                <h3>API Reference</h3>
-                <p>Complete API documentation with examples for all endpoints.</p>
+                <div class="tag">Latest</div>
+                <h3>C++ SDK</h3>
+                <p>High-performance native SDK with hardware fingerprinting.</p>
             </div>
             <div class="feature-card reveal">
-                <h3>SDK Guides</h3>
-                <p>Step-by-step guides for integrating our SDK in various languages.</p>
+                <div class="tag">Stable</div>
+                <h3>C# SDK</h3>
+                <p>Managed SDK with async validation and caching support.</p>
             </div>
             <div class="feature-card reveal">
-                <h3>Best Practices</h3>
-                <p>Security best practices and optimization tips for your implementation.</p>
+                <div class="tag">Beta</div>
+                <h3>Rust SDK</h3>
+                <p>Memory-safe integration with minimal overhead.</p>
             </div>
+        </div>
+
+        <div class="card reveal">
+            <h3>Quick start</h3>
+            <p>Register the client, then verify the device on launch.</p>
+            <pre class="code-block">yua.init("YUA_7712_X");
+auto result = yua.verify(hwid, "core_v2");
+if (result.active) { launch(); }</pre>
         </div>
 
         <div class="cta-card reveal">
             <div>
-                <h3>Looking for SDK packages?</h3>
-                <p>Browse the latest SDK downloads and integration notes.</p>
+                <h3>Need help integrating?</h3>
+                <p>Our docs include step-by-step guides and best practices.</p>
             </div>
-            <a href="sdk.html" class="btn btn-primary">View SDK</a>
+            <a href="documentation.html" class="btn btn-primary">Read Docs</a>
         </div>
 
         <footer>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YuaAuth status and uptime dashboard.">
+    <title>Status | YuaAuth</title>
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo">YuaAuth</a>
+            <div class="nav-links">
+                <a href="../index.html#engine">Engine</a>
+                <a href="documentation.html">Documentation</a>
+                <a href="security-audit.html">Security Audit</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="status.html">Status</a>
+            </div>
+            <a href="login.html" class="btn btn-secondary">Login</a>
+        </nav>
+
+        <section class="hero">
+            <a class="status-pill" href="status.html">
+                <span class="status-dot"></span>
+                All systems operational
+            </a>
+            <h1>Status & Uptime</h1>
+            <p>Live operational view of YuaAuth services and incident history.</p>
+        </section>
+
+        <div class="status-grid">
+            <div class="status-card reveal">
+                <div class="status-indicator"><span></span> API Gateway</div>
+                <p>Healthy. Average response time 120ms.</p>
+            </div>
+            <div class="status-card reveal">
+                <div class="status-indicator"><span></span> Licensing Core</div>
+                <p>Healthy. License checks processing normally.</p>
+            </div>
+            <div class="status-card reveal">
+                <div class="status-indicator partial"><span></span> Dashboard</div>
+                <p>Minor delays for analytics refresh.</p>
+            </div>
+            <div class="status-card reveal">
+                <div class="status-indicator"><span></span> Webhooks</div>
+                <p>Healthy. No delivery backlog detected.</p>
+            </div>
+        </div>
+
+        <span class="section-label">Uptime (Last 90 Days)</span>
+        <div class="stats-grid">
+            <div class="card reveal">
+                <h3>99.98%</h3>
+                <p>API Gateway</p>
+            </div>
+            <div class="card reveal">
+                <h3>99.97%</h3>
+                <p>Licensing Core</p>
+            </div>
+            <div class="card reveal">
+                <h3>99.95%</h3>
+                <p>Dashboard</p>
+            </div>
+            <div class="card reveal">
+                <h3>100%</h3>
+                <p>Webhook Delivery</p>
+            </div>
+        </div>
+
+        <div class="card reveal">
+            <h3>Recent incidents</h3>
+            <p>Last updated: February 4, 2026</p>
+            <p>No incidents reported in the last 30 days.</p>
+        </div>
+
+        <footer>
+            <div>© 2026 YuaAuth Systems</div>
+            <div>
+                <a href="status.html">Status: All Systems Operational</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

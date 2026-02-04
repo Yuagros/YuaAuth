@@ -11,23 +11,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Simple fade-in animation on scroll
-const observerOptions = {
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
+// Repeatable reveal animation on scroll
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('is-visible');
+        } else {
+            entry.target.classList.remove('is-visible');
         }
     });
-}, observerOptions);
+}, { threshold: 0.2 });
 
-document.querySelectorAll('.feature-card, .step-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
+document.querySelectorAll('.reveal').forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 80, 320)}ms`;
+    revealObserver.observe(el);
 });
