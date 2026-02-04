@@ -253,35 +253,6 @@ nav {
     100% { opacity: 0.15; }
 }
 
-.announcement-banner {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    background: #0f0f0f;
-    border-bottom: 1px solid var(--border);
-    color: var(--text);
-    font-size: 13px;
-    padding: 10px 24px;
-}
-
-.announcement-banner .announcement-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.announcement-banner strong {
-    font-weight: 600;
-}
-
-.announcement-banner .announcement-ends {
-    color: var(--text-muted);
-    font-size: 12px;
-    white-space: nowrap;
-}
 
 .terminal-header {
     background: #0f111a;
