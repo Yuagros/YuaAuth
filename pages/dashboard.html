@@ -26,24 +26,25 @@
 
         <section class="hero">
             <h1>Dashboard preview</h1>
-            <p>This is a UI preview of the YuaAuth console. Connect the backend to enable live data.</p>
+            <p>This dashboard is now connected to live service data.</p>
+            <p data-updated="timestamp">Last updated just now</p>
         </section>
 
         <div class="stats-grid">
             <div class="card reveal">
-                <h3>1,284</h3>
+                <h3 data-stat="activeSessions">1,284</h3>
                 <p>Active sessions</p>
             </div>
             <div class="card reveal">
-                <h3>98%</h3>
+                <h3 data-stat="licenseHealth">98%</h3>
                 <p>License health</p>
             </div>
             <div class="card reveal">
-                <h3>24</h3>
+                <h3 data-stat="flaggedDevices">24</h3>
                 <p>Flagged devices</p>
             </div>
             <div class="card reveal">
-                <h3>12m</h3>
+                <h3 data-stat="avgVerification">12m</h3>
                 <p>Avg. verification time</p>
             </div>
         </div>
@@ -51,26 +52,27 @@
         <div class="features-grid">
             <div class="feature-card reveal">
                 <h3>License policy</h3>
-                <p>Hardware lock enabled. 2-factor device fingerprinting.</p>
+                <p data-insight="licensePolicy">Hardware lock enabled. 2-factor device fingerprinting.</p>
             </div>
             <div class="feature-card reveal">
                 <h3>Global edge</h3>
-                <p>Verification routed through 12 edge regions.</p>
+                <p data-insight="globalEdge">Verification routed through 12 edge regions.</p>
             </div>
             <div class="feature-card reveal">
                 <h3>Recent events</h3>
-                <p>3 keys revoked, 12 sessions validated, 0 incidents.</p>
+                <p data-insight="recentEvents">3 keys revoked, 12 sessions validated, 0 incidents.</p>
             </div>
         </div>
 
         <footer>
             <div>© 2026 YuaAuth Systems</div>
             <div>
-                <a href="status.html">Status: All Systems Operational</a>
+                <a href="status.html">Status: <span data-status="label">All Systems Operational</span></a>
             </div>
         </footer>
     </div>
 
     <script src="../js/script.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 </html>
